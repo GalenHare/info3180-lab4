@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+<div class="imgbox">
+	{% for file in files %}
+		<img class="image" src="{{ url_for('static', filename="uploads/" + file) }}" />
+	{% endfor %}
+</div>
+
+{%endblock%}
